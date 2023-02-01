@@ -1,0 +1,45 @@
+@keyframes blanc {
+    from {
+        height: 0px;
+        width: 0px;
+        opacity: 0%;
+        display: none;
+        background: none;
+    }
+    to {
+        background: none;
+        display: none;
+        opacity: 0%;
+        height: 0px;
+        width: 0px;
+    }
+}
+.none{
+    animation-name: blanc;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background: none;
+}
+
+@keyframes arrowHover {
+    from {
+        background-color: aqua;
+        text-decoration: underline;
+        text-decoration-style: wavy;
+        border-radius: 0%
+
+    }
+    to {
+        background-color: aqua;
+        border-radius: 100%
+    }
+}
+.arrowHover{
+    animation-name: arrowHover ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+

@@ -1,0 +1,71 @@
+*{
+    font-family: 'Press Start 2P', cursive;
+   overflow: hidden;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    position: relative;
+}
+button{
+    cursor: crosshair ;
+    background:none;
+    border: none;
+    margin-top: 36vh ;
+    z-index: 3;
+    
+}
+#arrowControl{
+    display: flex;
+    z-index: 10;
+}
+body{
+    background-color: pink;
+    border: 15px solid rgba(0, 0, 0, 0.5);
+    min-height: 96vh;
+}
+#hud{
+    display: flex;
+    flex-direction: row;
+}
+.arrow{
+    height: 16vh;
+}
+#arrowTwo:hover{
+    content: url(/imgHud/puerpleArrow.png);
+    animation-name: arrowHover ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#arrowOne:hover{
+    content: url(/imgHud/puerpleArrowR.png);
+    animation-name: arrowHover ;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hudPrin{
+    height: 100vh;
+    z-index: 1;
+    background: url(/imgHud/Room0.png) no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: center;
+}
+#prota{
+    z-index: 2;
+    display: flex;
+    justify-content: end;
+    min-height: 40px;
+    width: auto;
+    margin: auto;
+    padding-top: 36vh ;
+}
+#flechas{
+    z-index: 3;
+    display: flex;
+    flex-direction: space-between;
+    gap: 75%;
+    padding-left: 4%;
+    bottom: 93vh;
+}
