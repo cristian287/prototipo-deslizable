@@ -25,14 +25,12 @@
 @keyframes arrowHover {
     from {
         background-color: aqua;
-        text-decoration: underline;
-        text-decoration-style: wavy;
-        border-radius: 0%
-
+        z-index: 10;
+        transform: translateX(10deg);
     }
     to {
+        z-index: 10;
         background-color: aqua;
-        border-radius: 100%
     }
 }
 .arrowHover{

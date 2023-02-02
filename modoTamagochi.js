@@ -1,43 +1,35 @@
-function tamagochiMode(){
+function tamagochiMode(){ //Ir al modo Tamagochi (Entrar en modo deslizable)
+    mostrarDesaparecer("flechas","aparecer")
+    mostrarDesaparecer("prota","aparecer")
     if (primeraEntrada){
         primeraEntrada = false
         sala = 0
     }
     irSala(sala)
-    let leftKey = document.getElementById("left")
-    let rightKey = document.getElementById("right")
-    leftKey.addEventListener("click",function(){handlerClickKeys("left")})
-    rightKey.addEventListener("click",function(){handlerClickKeys("right")})
 }
-function handlerClickKeys(key){
-    console.log("click handled")
-    if (key === left){sala = sala - 1}
+function handlerClickKeys(key){ //Detectar una flecha y mover a la sala adecuada
+    console.log(key)
+    console.log("de sala:" + sala)
+    if (key === "left"){sala = sala - 1}
     else{sala = sala + 1}
-    if (sala < 0){sala = 1}
-    if (sala > 1){sala = 0}
+    if (sala < 0){sala = maximasSalas}
+    if (sala > maximasSalas){sala = 0}
     mostrarDesaparecer(salaActual,"desaparecer")
+    console.log("a sala:" + sala)
     irSala(sala)
 }
 function irSala(ubicacion){
+    console.log("Yendo a la sala" + ubicacion)
     switch(ubicacion){
         case 0: habitacion();break;
         case 1: cocina();break;
+        case 2: baño();break;
+        case 3: gimnasio();break
     }
-}
-function habitacion(){
-    salaActual = "hudPrin"
-    mostrarDesaparecer("hudPrin","aparecer")
-    //interacciones de la habitacion
-}
-function cocina(){
-    salaActual = "hudCocina"
-    mostrarDesaparecer("hudCocina","aparecer")
-    //interacciones de la cocina
 }
 function mostrarDesaparecer(nombre,swap){
     console.log(nombre)
     if (swap === "aparecer"){document.getElementById(nombre).classList.remove("none")}
     else{document.getElementById(nombre).classList.add("none")}
 }
-let salaActual
-tamagochiMode()
+document.getElementById("start").addEventListener("click",function(){tamagochiMode()}) //BOTON DE TESTEO

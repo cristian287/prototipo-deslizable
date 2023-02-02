@@ -1,5 +1,5 @@
 
-#hudCocina{ /*ROTO*/
+#hudCocina{
     height: 100vh;
     z-index: 1;
     background: url(/imgHud/Room1.png) no-repeat center center fixed;

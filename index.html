@@ -5,24 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/css/dormitorio/estilosBase.css">
     <link rel="stylesheet" type="text/css" href="/css/dormitorio/animacionesBase.css">
-    <link rel="stylesheet" type="text/css" href="/css/cocina/estilosBase.css">
-    <link rel="stylesheet" type="text/css" href="/css/cocina/animacionesBase.css">
+    <link rel="stylesheet" type="text/css" href="/css/cocina/estilosBaseCocina.css">
+    <link rel="stylesheet" type="text/css" href="/css/cocina/animacionesBaseCosina.css">
+    <link rel="stylesheet" type="text/css" href="/css/baño/estilosBaseBaño.css">
+    <link rel="stylesheet" type="text/css" href="/css/baño/animacionesBaseBaño.css">
 	<title>linea lineal de tiempo alterno</title>
 </head>
 <body>
+
+    <!--BACKGROUNDS Y HUDS-->
     <div id="hudPrin" class="none">
-        <div id="hud">
-            <img id="prota" src="/imgHud/nemesis.gif" alt="prota">
-        </div>
+        <div id="hud"></div>
     </div>
     <div id = "hudCocina" class="none">
-        <div id="hud">
-        </div>
+        <div id="hud"></div>
     </div>
-    <div id="flechas">
-        <button id="right"><img id = "arrowTwo" class="arrow" src="/imgHud/arrowLeft.png" alt=""></button>
-        <button id="left" ><img id = "arrowOne" class="arrow" src="/imgHud/arrowR.png" alt=""></button>
+    <div id = "hudBaño" class="none">
+        <div id="hud"></div>
     </div>
+
+
+
+    <!--TAMAGOCHI Y FLECHAS-->
+    <div id="prota" class = "none"  >
+        <img src="/imgHud/nemesis.gif" alt="prota">
+    </div>
+    <div id="flechas" class = "none">
+        <button id="left"><img id = "arrowTwo" class="arrow arrowButton" src="/imgHud/arrowLeft.png" alt=""></button>
+        <button id="right" ><img id = "arrowOne" class="arrow arrowButton" src="/imgHud/arrowR.png" alt=""></button>
+    </div>
+    <button id = "start">Activar modo tamagochi</button> <!--Boton de testeo-->
 </body>
 <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="habitacionesDeslizable.js"></script>
 <script type="text/javascript" src="modoTamagochi.js"></script>
