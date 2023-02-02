@@ -7,6 +7,12 @@ function tamagochiMode(){ //Ir al modo Tamagochi (Entrar en modo deslizable)
     }
     irSala(sala)
 }
+function tamagochiModeOff(){
+    primeraEntrada = true
+    mostrarDesaparecer("flechas","desaparecer")
+    mostrarDesaparecer("prota","desaparecer")
+    mostrarDesaparecer(salaActual,"desaparecer")
+}
 function handlerClickKeys(key){ //Detectar una flecha y mover a la sala adecuada
     console.log(key)
     console.log("de sala:" + sala)
@@ -33,3 +39,4 @@ function mostrarDesaparecer(nombre,swap){
     else{document.getElementById(nombre).classList.add("none")}
 }
 document.getElementById("start").addEventListener("click",function(){tamagochiMode()}) //BOTON DE TESTEO
+document.getElementById("off").addEventListener("click",function(){tamagochiModeOff()})
